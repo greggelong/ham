@@ -7,6 +7,7 @@ let hanzi = ['善', '随', '俗', '若', '水', '乡', '上', '入', '。', '。
 let textOut;
 let capture;
 let hanziImg;
+let myout;
 
  
 
@@ -16,6 +17,7 @@ function setup() {
   capture.size(50,50)
   pixelDensity(1);
   background(255);
+  myout = select('#output')
    
    
   
@@ -39,10 +41,10 @@ function showImage(){
 function drawImage(){
   // loops through the canvas to create the hanzi art
   
-
+   let textrow = ""
   // loop through by rows  so can print lines of text
   for (let j =0; j<height; j++){
-    let textrow = "";
+    
     for(let i =0; i<width; i++){
       // read value at image xy
       
@@ -51,15 +53,18 @@ function drawImage(){
       let hanidx = floor(map(col[0],0,255,0,hanzi.length-1))
      // let mychr = grayscale[chridx]  // for ascii
       let mychr = hanzi[hanidx];   //for chinese
-      print(hanidx, mychr)
+      //print(hanidx, mychr)
   
       textrow += mychr
       
       
       
     }
-    createP(textrow)
+    textrow += `\n`  
+    print(textrow)
+    
     
   }
+   myout.html(textrow)
   
 }
