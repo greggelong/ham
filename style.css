@@ -5,7 +5,7 @@ html, body {
   background-color: linen;
   /*line-height: 0.3;*/
   font-size: small;
-  white-space: pre-line;
+  white-space: pre-line; /* lets the dom use \n for line breaks */
 }
 canvas {
   display: block;
