@@ -54,10 +54,10 @@ the current shot is in the text area, will smaller font to help with mobile disp
 ## further development of an idea
 ## thousand charater text
 
-[ ] create a 32 by 32 image that has 1024 total characters
-[ ] make a 2 dimensional list of  characters from the 千字文 Thousand Character essay
-[ ] create the image using many more characters of equivalent stroke count making a more meaningful image
-[ ] then use those images as a guide to create real ink and paper calligraphy
+- [ ] create a 32 by 32 image that has 1024 total characters
+- [ ] make a 2 dimensional list of  characters from the 千字文 Thousand Character essay
+- [ ] create the image using many more characters of equivalent stroke count making a more meaningful image
+- [ ] then use those images as a guide to create real ink and paper calligraphy
 
 
 
