@@ -61,10 +61,12 @@ function drawImage(){
       
     }
     textrow += `\n`  
-    print(textrow)
+    
     
     
   }
-   myout.html(textrow)
+   myout.html(textrow);
+   createP(textrow);
+   
   
 }
