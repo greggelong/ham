@@ -1,6 +1,10 @@
 # ham
 ## hanzi art maker
 
+I tried to change the way it writes to the screen but I forgot it got the 
+
+image as video was captured not an image
+
 Here I have an online version in javaScript using p5.js DOM
 
 and pixel array. 
