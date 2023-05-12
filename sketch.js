@@ -13,7 +13,7 @@ let sz =10
  
 
 function setup() {
-  createCanvas(500,500);
+  createCanvas(50,50);
   capture = createCapture(VIDEO);
   capture.size(50,50)
   pixelDensity(1);
@@ -32,24 +32,24 @@ function mouseClicked(){
 
 function showImage(){
   // draws that frame to the canvas
-  //image(capture, 0, 0,width,height);
-  //filter(GRAY);
-  background(255)
+  image(capture, 0, 0,width,height);
+  filter(GRAY);
+  //background(255)
   drawImage();
 
 }
 
 function drawImage(){
-  // loops through the captured image to create the hanzi art
+  // loops through the canvas image to create the hanzi art
   
    let textrow = ""
   // loop through by rows  so can print lines of text
-  for (let j =0; j<capture.height; j++){
+  for (let j =0; j<height; j++){
     
-    for(let i =0; i<capture.width; i++){
+    for(let i =0; i<width; i++){
       // read value at image xy
       
-      let col = capture.get(i, j);
+      let col = get(i, j);
       //let chridx = floor(map(col[0],0,255,10,0)); // for ascii
       let hanidx = floor(map(col[0],0,255,0,hanzi.length-1))
      // let mychr = grayscale[chridx]  // for ascii
@@ -58,9 +58,9 @@ function drawImage(){
   
       textrow += mychr
       // draw to canvas
-      fill(col[0])
-      noStroke();
-      rect(i*sz,j*sz,sz,sz)
+      //fill(col[0])
+      //noStroke();
+      //rect(i*sz,j*sz,sz,sz)
       
       
       
